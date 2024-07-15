@@ -2,66 +2,29 @@ package slides
 
 import DarkSourceCode
 import Icon
+import SlideType
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.input.pointer.PointerIcon
-import androidx.compose.ui.input.pointer.pointerHoverIcon
-import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.em
 import net.kodein.cup.PreparedSlide
 import net.kodein.cup.sa.rememberSourceCode
-import net.kodein.cup.ui.SpanStyleSheet
 import net.kodein.cup.utils.dataMapOf
 
-
-object MyStyleSheet : SpanStyleSheet() {
-    val em by registerMarker(SpanStyle(
-        fontWeight = FontWeight.Bold,
-        fontSize = 1.2.em
-    ))
-}
-
-@Composable
-private fun Link(
-    text: String,
-    url: String
-) {
-    val uriHandler = LocalUriHandler.current
-    Text(
-        text = text,
-        color = MaterialTheme.colorScheme.primary,
-        textDecoration = TextDecoration.Underline,
-        modifier = Modifier
-            .pointerHoverIcon(PointerIcon.Hand)
-            .clickable {
-                uriHandler.openUri(url)
-            }
-    )
-
-}
 
 val serializationWhatIs by PreparedSlide(
     stepCount = 3,
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Serializzazione - Cos'è?")
+        SlideType.Normal(slideTitle = "Serialization - What is it?")
     )
 ) {
 
