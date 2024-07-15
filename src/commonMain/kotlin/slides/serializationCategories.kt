@@ -11,13 +11,13 @@ import net.kodein.cup.ui.styled
 import net.kodein.cup.utils.dataMapOf
 import net.kodein.cup.widgets.material3.BulletPoints
 
-val serializationTypes by Slide(
+val serializationCategories by Slide(
     stepCount = 4,
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Serialization - Types")
+        SlideType.Normal(slideTitle = "Serialization - Categories")
     )
 ) { step ->
-    Text("Various types of serialization:", style = MaterialTheme.typography.headlineMedium)
+    Text("Various categories of serialization", style = MaterialTheme.typography.headlineMedium)
     Spacer(modifier = Modifier.height(20.dp))
     BulletPoints(
         spacedBy = 16.dp,

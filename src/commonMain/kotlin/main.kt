@@ -39,7 +39,7 @@ import net.kodein.cup.utils.DataMapElement
 import net.kodein.cup.widgets.material3.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
 import slides.header
-import slides.serializationTypes
+import slides.serializationCategories
 import slides.serializationWhatIs
 
 
@@ -163,5 +163,5 @@ fun main() = cupApplication(
 val presentationSlides = Slides(
     header,
     serializationWhatIs,
-    serializationTypes,
+    serializationCategories,
 )
