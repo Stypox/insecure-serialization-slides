@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.em
 import net.kodein.cup.Slide
 import net.kodein.cup.ui.SpanStyleSheet
 import net.kodein.cup.ui.styled
+import net.kodein.cup.utils.dataMapOf
 import net.kodein.cup.widgets.material3.BulletPoints
 import org.kodein.emoji.Emoji
 import org.kodein.emoji.activities.event.Sparkles
@@ -56,7 +57,10 @@ private fun Link(
 }
 
 val todo by Slide(
-    stepCount = 4
+    stepCount = 4,
+    user = dataMapOf(
+        SlideType.Normal(slideTitle = "Todo slide")
+    )
 ) { step ->
 
     Text(

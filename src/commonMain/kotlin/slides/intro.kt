@@ -1,5 +1,6 @@
 package slides
 
+import SlideType
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -12,13 +13,18 @@ import insecure_serialization.generated.resources.Res
 import insecure_serialization.generated.resources.cup
 import net.kodein.cup.Slide
 import net.kodein.cup.ui.styled
+import net.kodein.cup.utils.dataMapOf
 import org.jetbrains.compose.resources.painterResource
 import org.kodein.emoji.Emoji
 import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
 import org.kodein.emoji.smileys_emotion.face_smiling.Wink
 
 
-val intro by Slide {
+val intro by Slide(
+    user = dataMapOf(
+        SlideType.Header
+    )
+) {
     Image(
         painterResource(Res.drawable.cup),
         contentDescription = "Compose ur Pres",
