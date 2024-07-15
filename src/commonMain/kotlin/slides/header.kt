@@ -20,7 +20,7 @@ import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
 import org.kodein.emoji.smileys_emotion.face_smiling.Wink
 
 
-val intro by Slide(
+val header by Slide(
     user = dataMapOf(
         SlideType.Header
     )

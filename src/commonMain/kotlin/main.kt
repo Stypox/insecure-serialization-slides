@@ -16,17 +16,20 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import net.kodein.cup.LocalPresentationState
 import net.kodein.cup.Presentation
+import net.kodein.cup.SLIDE_SIZE_16_9
+import net.kodein.cup.SlideSpecs
 import net.kodein.cup.Slides
+import net.kodein.cup.TransitionSet
 import net.kodein.cup.cupApplication
 import net.kodein.cup.currentSlide
 import net.kodein.cup.laser.laser
@@ -35,8 +38,8 @@ import net.kodein.cup.utils.DataMap
 import net.kodein.cup.utils.DataMapElement
 import net.kodein.cup.widgets.material3.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
-import slides.intro
-import slides.todo
+import slides.header
+import slides.serializationWhatIs
 
 
 sealed class SlideType : DataMapElement<SlideType>(Key) {
@@ -66,6 +69,11 @@ fun main() = cupApplication(
                 // TODO: Configure plugins
                 speakerWindow()
                 laser()
+                defaultSlideSpecs = SlideSpecs(
+                    size = SLIDE_SIZE_16_9,
+                    startTransitions = TransitionSet.moveHorizontal(LayoutDirection.Ltr),
+                    endTransitions = TransitionSet.moveHorizontal(LayoutDirection.Ltr),
+                )
             },
             backgroundColor = MaterialTheme.colorScheme.background
         ) { slidesContent ->
@@ -152,6 +160,6 @@ fun main() = cupApplication(
 
 // TODO: Write your own slides!
 val presentationSlides = Slides(
-    intro,
-    todo
+    header,
+    serializationWhatIs
 )
