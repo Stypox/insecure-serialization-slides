@@ -55,7 +55,7 @@ object MyStyleSheet : SpanStyleSheet() {
 }
 
 @Composable
-private fun Link(
+fun LinkText(
     text: String,
     url: String
 ) {

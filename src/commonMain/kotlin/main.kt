@@ -39,8 +39,12 @@ import net.kodein.cup.utils.DataMapElement
 import net.kodein.cup.widgets.material3.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
 import slides.header
+import slides.pickleIntroduction
+import slides.pickleLanguage
+import slides.pickleReduce
+import slides.pickleTools
 import slides.serializationCategories
-import slides.serializationWhatIs
+import slides.serializationIntroduction
 
 
 sealed class SlideType : DataMapElement<SlideType>(Key) {
@@ -129,7 +133,7 @@ fun main() = cupApplication(
                                 .padding(horizontal = 12.dp, vertical = 8.dp),
                         ) {
                             Text(
-                                text = "Fabio Giovanazzi @ TeamItaly training",
+                                text = "Fabio Giovanazzi (@Stypox)",
                                 fontSize = 10.sp,
                                 fontStyle = FontStyle.Italic,
                                 modifier = Modifier.alpha(decorationsAlpha * 0.7f)
@@ -143,7 +147,7 @@ fun main() = cupApplication(
                                 modifier = Modifier.alpha(decorationsAlpha),
                             )
                             Text(
-                                text = "Insecure serialization",
+                                text = "Insecure serialization - TeamItaly training",
                                 fontSize = 10.sp,
                                 fontStyle = FontStyle.Italic,
                                 textAlign = TextAlign.Right,
@@ -162,6 +166,10 @@ fun main() = cupApplication(
 // TODO: Write your own slides!
 val presentationSlides = Slides(
     header,
-    serializationWhatIs,
+    serializationIntroduction,
     serializationCategories,
+    pickleIntroduction,
+    pickleReduce,
+    pickleLanguage,
+    pickleTools,
 )

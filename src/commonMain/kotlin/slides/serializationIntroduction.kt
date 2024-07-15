@@ -21,10 +21,10 @@ import net.kodein.cup.sa.rememberSourceCode
 import net.kodein.cup.utils.dataMapOf
 
 
-val serializationWhatIs by PreparedSlide(
+val serializationIntroduction by PreparedSlide(
     stepCount = 3,
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Serialization - What is it?")
+        SlideType.Normal(slideTitle = "Serialization - Introduction")
     )
 ) {
 
