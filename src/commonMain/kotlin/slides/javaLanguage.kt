@@ -4,7 +4,6 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -26,6 +25,9 @@ val javaLanguage by Slide(
             }
             BulletPoint {
                 Text(styled { "Invokes ${+i}magic methods${-i} during or after serialization" })
+            }
+            BulletPoint {
+                Text("readObject(), readResolve(), validateObject(), ...")
             }
         }
         AnimatedVisibility(visible = step >= 1) {

@@ -41,6 +41,7 @@ import org.kodein.emoji.compose.EmojiService
 import slides.header
 import slides.javaIntroduction
 import slides.javaLanguage
+import slides.javaPrevention
 import slides.javaTools
 import slides.pickleIntroduction
 import slides.pickleLanguage
@@ -177,4 +178,5 @@ val presentationSlides = Slides(
     javaIntroduction,
     javaLanguage,
     javaTools,
+    javaPrevention,
 )
