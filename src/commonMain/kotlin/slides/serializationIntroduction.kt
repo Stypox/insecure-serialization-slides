@@ -40,9 +40,11 @@ val serializationIntroduction by PreparedSlide(
     }
 
     val jsonData = rememberSourceCode(language = "json") {
+        val m by marker(highlighted(2))
+
         """
             {
-                "name": "John",
+                "name":$m $X"John",
                 "age": 34
             }
         """.trimIndent()
@@ -87,8 +89,16 @@ val serializationIntroduction by PreparedSlide(
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             DarkSourceCode(pythonSerCode, step = step)
-            Icon(Icons.AutoMirrored.Filled.ArrowForward)
-            DarkSourceCode(jsonData)
+            Icon(
+                Icons.AutoMirrored.Filled.ArrowForward,
+                modifier = Modifier.alpha(
+                    animateFloatAsState(
+                        if (step == 2) 0.1f else 1.0f,
+                        animationSpec = tween(600),
+                    ).value
+                )
+            )
+            DarkSourceCode(jsonData, step = step)
             Icon(
                 Icons.AutoMirrored.Filled.ArrowForward,
                 modifier = Modifier.alpha(

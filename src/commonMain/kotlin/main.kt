@@ -39,6 +39,9 @@ import net.kodein.cup.utils.DataMapElement
 import net.kodein.cup.widgets.material3.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
 import slides.header
+import slides.javaIntroduction
+import slides.javaLanguage
+import slides.javaTools
 import slides.pickleIntroduction
 import slides.pickleLanguage
 import slides.pickleReduce
@@ -163,7 +166,6 @@ fun main() = cupApplication(
     }
 }
 
-// TODO: Write your own slides!
 val presentationSlides = Slides(
     header,
     serializationIntroduction,
@@ -172,4 +174,7 @@ val presentationSlides = Slides(
     pickleReduce,
     pickleLanguage,
     pickleTools,
+    javaIntroduction,
+    javaLanguage,
+    javaTools,
 )

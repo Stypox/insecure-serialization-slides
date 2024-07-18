@@ -22,8 +22,8 @@ val pickleLanguage by PreparedSlide(
     )
 ) {
     val codeLeft = rememberSourceCode("text") {
-        val m1 by marker(highlighted(1))
-        val m2 by marker(highlighted(2))
+        val m1 by marker(highlighted(2))
+        val m2 by marker(highlighted(3))
 
         """
              0: \x80 PROTO      4
@@ -38,8 +38,8 @@ val pickleLanguage by PreparedSlide(
     }
 
     val codeRight = rememberSourceCode("text") {
-        val m1 by marker(highlighted(1))
-        val m2 by marker(highlighted(2))
+        val m1 by marker(highlighted(2))
+        val m2 by marker(highlighted(3))
 
         """
             ${m2}33:${m1} ${X}(    MARK
@@ -60,7 +60,7 @@ val pickleLanguage by PreparedSlide(
             DarkSourceCode(codeLeft, step = step)
             DarkSourceCode(codeRight, step = step)
         }
-        AnimatedVisibility(step >= 3) {
+        AnimatedVisibility(step >= 1) {
             Text(
                 styled { "Two memories available: ${+b}stack${-b} and ${+b}memo${-b}" },
                 modifier = Modifier.padding(top = 24.dp)
