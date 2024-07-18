@@ -52,6 +52,7 @@ import slides.pickleReduce
 import slides.pickleTools
 import slides.serializationCategories
 import slides.serializationIntroduction
+import slides.writeups
 
 
 sealed class SlideType : DataMapElement<SlideType>(Key) {
@@ -154,7 +155,7 @@ fun main() = cupApplication(
                                 modifier = Modifier.alpha(decorationsAlpha),
                             )
                             Text(
-                                text = "Insecure serialization - TeamItaly training",
+                                text = "Insecure deserialization - TeamItaly training",
                                 fontSize = 10.sp,
                                 fontStyle = FontStyle.Italic,
                                 textAlign = TextAlign.Right,
@@ -185,4 +186,5 @@ val presentationSlides = Slides(
     phpIntroduction,
     phpTools,
     phpExample,
+    writeups,
 )
