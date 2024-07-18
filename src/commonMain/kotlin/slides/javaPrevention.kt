@@ -20,7 +20,7 @@ import net.kodein.cup.widgets.material3.BulletPoints
 
 val javaPrevention by PreparedSlide(
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Java - Prevention")
+        SlideType.Normal(slideTitle = "Java Object Serialization - Prevention")
     )
 ) {
     val sourceCode = rememberSourceCode("java") {

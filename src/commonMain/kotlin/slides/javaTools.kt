@@ -9,7 +9,7 @@ import net.kodein.cup.widgets.material3.BulletPoints
 
 val javaTools by Slide(
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Java - Tools")
+        SlideType.Normal(slideTitle = "Java Object Serialization - Tools")
     )
 ) {
     BulletPoints {

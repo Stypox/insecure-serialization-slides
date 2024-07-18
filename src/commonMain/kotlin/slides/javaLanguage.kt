@@ -15,7 +15,7 @@ import net.kodein.cup.widgets.material3.BulletPoints
 val javaLanguage by Slide(
     stepCount = 2,
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "Java - Magic functions")
+        SlideType.Normal(slideTitle = "Java Object Serialization - Mode of operation")
     )
 ) { step ->
     Column {
