@@ -47,7 +47,7 @@ val header by Slide(
     )
     Spacer(modifier = Modifier.fillMaxWidth().height(48.dp))
     Text(
-        text = styled { "${+i}Fabio Giovanazzi (@Stypox), TeamItaly training 2024${-i}" },
+        text = styled { "${+i}Fabio Giovanazzi (@Stypox), TeamItaly training 18/07/2024${-i}" },
         style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Normal)
     )
     Spacer(modifier = Modifier.fillMaxWidth().height(24.dp))
