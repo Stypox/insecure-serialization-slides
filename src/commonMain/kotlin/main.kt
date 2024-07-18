@@ -45,6 +45,7 @@ import slides.javaPrevention
 import slides.javaTools
 import slides.phpExample
 import slides.phpIntroduction
+import slides.phpTools
 import slides.pickleIntroduction
 import slides.pickleLanguage
 import slides.pickleReduce
@@ -182,5 +183,6 @@ val presentationSlides = Slides(
     javaTools,
     javaPrevention,
     phpIntroduction,
+    phpTools,
     phpExample,
 )

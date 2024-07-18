@@ -8,7 +8,7 @@ import net.kodein.cup.utils.dataMapOf
 val phpExample by PreparedSlide(
     stepCount = 3,
     user = dataMapOf(
-        SlideType.Normal(slideTitle = "PHP serialization - Introduction")
+        SlideType.Normal(slideTitle = "PHP serialization - Example exploit")
     )
 ) {
     val sourceCode = rememberSourceCode("php") {
